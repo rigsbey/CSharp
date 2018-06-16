@@ -1,0 +1,27 @@
+﻿@model IEnumerable<WebApplication1.Models.DetaisEmployeeView>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" charset="utf-8" />
+    <title>Details</title>
+    <style>
+        body {
+            background-color: #0094ff;
+        }
+    </style>
+</head>
+<body>
+    <h1><tt>Details</tt><br></h1>
+    <table>
+        @foreach (var detail in Model)
+        {
+            <tr>
+                <td><tt>Адрес:<i>@detail.Adress</i> </tt></td>    
+                <td><tt>Семейное положение: @detail.MaritalStatus</tt></td>            
+            </tr>
+
+        }
+    </table>
+
+</body>
+</html>
