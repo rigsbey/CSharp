@@ -1,4 +1,4 @@
-﻿@model IEnumerable<WebApplication1.Models.DetaisEmployeeView>
+﻿@model IEnumerable<WebApplication1.Models.EmployeeView>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,8 +16,8 @@
         @foreach (var detail in Model)
         {
             <tr>
-                <td><tt>Адрес:  <i>@detail.Adress<br></i> </tt></td>    
-                <td><tt>Семейное положение:  <i>@detail.MaritalStatus</i></tt></td>            
+                <td><tt><b>Адрес:</b>  <i>@detail.Adress<br></i> </tt></td>    
+                <td><tt><b>Семейное положение:</b>  <i>@detail.MaritalStatus</i></tt></td>            
             </tr>
 
         }
