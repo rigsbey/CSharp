@@ -62,7 +62,17 @@ namespace WebApplication1.Controllers
                 MaritalStatus = "Женат"
             }
         };
-        
+
+        public List<DetaisEmployeeView> oneElement = new List<DetaisEmployeeView>
+             {
+                 new DetaisEmployeeView
+                 {
+                      Adress = "Нариманова 30",
+                      MaritalStatus = "Женат"
+                 }
+            };
+
+
         //Если заполнили данными модель(шаблон), то это нужно отдать
         public IActionResult Index()
         {
@@ -71,11 +81,13 @@ namespace WebApplication1.Controllers
 
         public IActionResult Details(int id)
         {
-            return View(detailsEmployee);       
-            
-        }
 
-       
+            List<DetaisEmployeeView> oneElement1 = new List<DetaisEmployeeView>();
+            oneElement1.Add(detailsEmployee[id - 1]);
+          
+            return View(oneElement1);       
+            
+        }     
 
 
     }
