@@ -10,7 +10,7 @@ namespace WebApplication1.Controllers
     public class HomeController : Controller
     {
         //Берем и заполняем нашу МОДЕЛЬ СВОИМИ данными
-        private List<EmployeeView> _employees = new List<EmployeeView>
+        private List<EmployeeView> employees = new List<EmployeeView>
         {
             new EmployeeView
             {
@@ -44,43 +44,25 @@ namespace WebApplication1.Controllers
             }
         };
 
-        public List<DetaisEmployeeView> detailsEmployee = new List<DetaisEmployeeView>
-        {
-            new DetaisEmployeeView
-            {
-                Adress = "Нариманова 30",
-                MaritalStatus = "Женат"
-            },
-             new DetaisEmployeeView
-            {
-                Adress = "Толбухина 90",
-                MaritalStatus = "Не женат"
-            },
-              new DetaisEmployeeView
-            {
-                Adress = "Московская 1/30",
-                MaritalStatus = "Женат"
-            }
-        };   
-
         //Если заполнили данными модель(шаблон), то это нужно отдать
         public IActionResult Index()
         {
-            return View(_employees);
-        }       
+            return View(employees);
+        }
 
         public IActionResult Details(int id)
         {
+            var v = employees.Find(x => x.Id.Equals(id));
+            //if (ReferenceEquals(v, null))
+            //{
+            //    return NotFound();
+            //}
+            return View(v);
 
-            List<EmployeeView> oneElement1 = new List<EmployeeView>();
-            oneElement1.Add(_employees[id - 1]);
-          
-            return View(oneElement1);       
-            
-        }     
+        }
 
 
     }
-    
+
 
 }
