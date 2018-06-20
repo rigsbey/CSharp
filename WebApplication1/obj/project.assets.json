@@ -13250,23 +13250,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\test\\.nuget\\packages\\": {},
+    "C:\\Users\\abkam\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\test\\source\\repos\\lesson1asp\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "C:\\Users\\abkam\\source\\repos\\CSharp\\WebApplication1\\WebApplication1.csproj",
       "projectName": "WebApplication1",
-      "projectPath": "C:\\Users\\test\\source\\repos\\lesson1asp\\WebApplication1\\WebApplication1.csproj",
-      "packagesPath": "C:\\Users\\test\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\test\\source\\repos\\lesson1asp\\WebApplication1\\obj\\",
+      "projectPath": "C:\\Users\\abkam\\source\\repos\\CSharp\\WebApplication1\\WebApplication1.csproj",
+      "packagesPath": "C:\\Users\\abkam\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\abkam\\source\\repos\\CSharp\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\test\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\abkam\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
