@@ -1,31 +1,21 @@
 ﻿@model IEnumerable<WebApplication1.Models.EmployeeView>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" charset="utf-8" />
-    <title>Index</title>
-    <style>
-        body {
-            background-color: #0094ff;
-        }
-    </style>
-</head>
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Details";
 
-<body>
-    <p><tt>Олег, где макет? Игорь.</tt><br></p>
-    <table>
-        @foreach (var person in Model)
-        {
-            <tr>
-                <td><tt>@person.Id</tt></td>
-                <td><tt>@person.FirstName </tt></td>
-                <td><tt>@person.SurName</tt></td>
-                <td><tt>@person.Patronymic</tt></td>
-                <td><tt>@Html.ActionLink("Детали", "Details", new { id = person.Id})</tt></td>            
-            </tr>   
-        }
-    </table><br>
+}
+<p><tt>Олег, где макет? Игорь.</tt><br></p>
+<table>
+    @foreach (var person in Model)
+    {
+        <tr>
+            <td><tt>@person.Id</tt></td>
+            <td><tt>@person.FirstName </tt></td>
+            <td><tt>@person.SurName</tt></td>
+            <td><tt>@person.Patronymic</tt></td>
+            <td><tt>@Html.ActionLink("Детали", "Details", new { id = person.Id })</tt></td>
+        </tr>
+    }
+</table><br>
 
-</body>
-</html>

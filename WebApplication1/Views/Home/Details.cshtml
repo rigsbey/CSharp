@@ -1,23 +1,14 @@
 ﻿@model WebApplication1.Models.EmployeeView
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" charset="utf-8" />
-    <title>Details</title>
-    <style>
-        body {
-            background-color: #0094ff;
-        }
-    </style>
-</head>
-<body>
-    <h1><tt>Details</tt><br></h1>
+@{ 
+    Layout = "_Layout";
+    ViewBag.Title = "Details";
+    
+}
+
     <table>
         <tr>
             <td><tt><b>Адрес:</b>  <i>@Model.MaritalStatus<br></i> </tt></td>
             <td><tt><b>Семейное положение:</b>  <i>@Model.Adress</i></tt></td>
         </tr>
     </table>
-
-</body>
-</html>
+@Html.ActionLink("Назад", "Index");
