@@ -1,9 +1,9 @@
-﻿@model IEnumerable<EmployeeView> 
+﻿@model IEnumerable<EmployeeView>
 @{
     Layout = "_Layout";
     ViewBag.Title = "Index";
 
-}   
+}
 <p><tt>Олег, где макет? Игорь.</tt><br></p>
 <table>
     @foreach (var person in Model)
@@ -14,6 +14,9 @@
             <td><tt>@person.SurName</tt></td>
             <td><tt>@person.Patronymic</tt></td>
             <td><tt>@Html.ActionLink("Детали", "Details", new { id = person.Id })</tt></td>
+            <td>
+                <a asp-action="Details" asp-route-id="@person.Id"> Детали(Tag - helper)</a>
+            <td>
         </tr>
     }
 </table><br>
