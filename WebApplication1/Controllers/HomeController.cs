@@ -52,11 +52,7 @@ namespace WebApplication1.Controllers
 
         public IActionResult Details(int id)
         {
-            var v = employees.Find(x => x.Id.Equals(id));
-            //if (ReferenceEquals(v, null))
-            //{
-            //    return NotFound();
-            //}
+            var v = employees.Find(x => x.Id.Equals(id));           
             return View(v);
 
         }
